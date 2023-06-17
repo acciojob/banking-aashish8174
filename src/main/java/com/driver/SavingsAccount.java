@@ -34,7 +34,8 @@ public class SavingsAccount extends BankAccount{
 
     public double getCompoundInterest(int times, int years){
         // Return the final amount considering that bank gives compound interest on current amount given times per year
-        double finalAmount =
+        double finalAmount = getBalance()*Math.pow((getBalance()*(1+(rate/times))),years*times);
+        return finalAmount;
     }
 
 }
